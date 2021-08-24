@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean name="propertiesService"
+		class="egovframework.rte.fdl.property.impl.EgovPropertyServiceImpl"
+		destroy-method="destroy">
+		<property name="properties">
+			<map>
+				<entry key="pageUnit" value="5" />
+				<entry key="pageSize" value="10" />
+
+				<entry key="site.url" value="http://localhost:8081" />
+				<entry key="site.secure.url" value="https://localhost:8443" />
+
+				<!-- 네이버 -->
+				<entry key="naver.api.clientId" value="_3nhVuGudAfSAQys2lUa" />
+				<entry key="naver.api.clientSecret" value="l4jgdj_xOq" />
+				<entry key="naver.api.redirectUri" value="/naverCallbackUser" />
+
+				<!-- 카카오 -->
+				<entry key="kakao.api.clientId" value="7f47fb431fead606a8191921b679dd13" />
+				<entry key="kakao.api.redirectUri" value="/kakaoCallbackUser" />
+
+				<!-- 페이스북 -->
+				<entry key="facebook.api.redirectUri" value="facebookCallbackUser" />
+				<entry key="facebook.api.accessToken" value="0d9e1ae99ae50335ffbd35a13e8dbe05" />
+
+			</map>
+		</property>
+	</bean>
+
+</beans>	
